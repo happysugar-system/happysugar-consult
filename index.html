@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="合同会社Happy sugarの業務アプリ・ツール開発の無料相談。スプレッドシートのアプリ化、売上経費管理、ポイントカードなど。">
+<title>無料相談 | 合同会社Happy sugar</title>
+<style>
+:root{font-family:system-ui,-apple-system,"Noto Sans JP",sans-serif;color:#21334b;background:#f4f8fc}*{box-sizing:border-box}body{margin:0}.wrap{max-width:740px;margin:auto;padding:24px 16px 70px}header{text-align:center;padding:25px 0 12px}h1{font-size:clamp(25px,5vw,36px);line-height:1.4;margin:14px 0}h2{font-size:20px;margin-top:0}p{line-height:1.8}.muted{color:#596e85}.card{background:white;border-radius:18px;padding:clamp(18px,4vw,30px);box-shadow:0 7px 28px #19344a10;margin:18px 0}.pill{display:inline-block;background:#e6f1ff;color:#17549b;padding:8px 16px;border-radius:50px;font-size:13px;font-weight:700}label.field{display:block;font-weight:700;margin:19px 0 7px}input:not([type=radio]):not([type=checkbox]),textarea,select{width:100%;border:1px solid #bdcbd9;border-radius:10px;padding:13px;font:inherit;background:#fff}textarea{min-height:110px;resize:vertical}.choices{display:grid;grid-template-columns:repeat(auto-fit,minmax(175px,1fr));gap:9px}.choices label{border:1px solid #ccd6e0;border-radius:11px;padding:12px;cursor:pointer}.choices input{margin-right:6px}.small{font-size:13px}.req{color:#bd3e3e}.consent{display:flex;align-items:flex-start;gap:10px;margin:18px 0}.consent input{margin-top:5px}.notice{background:#eef4fb;border-radius:10px;padding:12px;font-size:13px}button{width:100%;border:0;border-radius:12px;background:#1767bc;color:#fff;padding:16px;font:700 17px system-ui;cursor:pointer}button:disabled{opacity:.5;cursor:not-allowed}.error{color:#b42318}.success{background:#e9f8ef;color:#17633c;padding:18px;border-radius:12px}.hp{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}details{margin-top:12px}summary{cursor:pointer;font-weight:700}footer{text-align:center;color:#617389;font-size:12px;margin-top:28px}
+</style>
+<script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script></head>
+<body><div class="wrap"><header><span class="pill">合同会社 Happy sugar</span><h1>「こんなことできる？」<br>から始める無料相談</h1><p class="muted">難しい仕様書は不要。お店や会社の「ちょっと不便」を教えてください。</p></header>
+<section class="card"><h2>こんなご相談ができます</h2><p>✓ ポイントカードをアプリにしたい<br>✓ 売上・経費・利益を簡単に見たい<br>✓ 複雑なExcel・スプレッドシートを見やすい画面にしたい<br>✓ 勤怠・車両・顧客管理を効率化したい<br>✓ 既存ツールを自社向けにカスタマイズしたい</p><p class="muted small">小さな改善からオーダーメイド開発まで。相談だけでも歓迎です。</p></section>
+<form class="card" id="consultForm"><h2>無料相談フォーム</h2><p class="muted small"><span class="req">*</span> は必須項目・所要時間約2分</p>
+<label class="field" for="category">相談したいこと <span class="req">*</span></label><select id="category" required><option value="">選んでください</option><option>まずは相談だけしたい</option><option>既存のExcel・スプシを使いやすくしたい</option><option>売上・経費・利益を管理したい</option><option>ポイントカード・顧客管理</option><option>勤怠・車両・業務管理</option><option>その他のアプリ・自動化</option></select>
+<p class="field"><strong>今はどんな方法で管理していますか？</strong></p><div class="choices"><label><input type="radio" name="current" value="Excel・スプシ">Excel・スプシ</label><label><input type="radio" name="current" value="紙・手書き">紙・手書き</label><label><input type="radio" name="current" value="既存システム">既存システム</label><label><input type="radio" name="current" value="まだ決まっていない">まだ決まっていない</label></div>
+<label class="field" for="details">困っていること・実現したいこと</label><textarea id="details" maxlength="4000" placeholder="例：売上を毎月手入力していて大変。スマホから見られるようにしたい。"></textarea>
+<label class="field" for="company">会社・店舗名（任意）</label><input id="company" maxlength="200" autocomplete="organization">
+<label class="field" for="name">お名前 <span class="req">*</span></label><input id="name" maxlength="100" required autocomplete="name">
+<label class="field" for="email">メールアドレス <span class="req">*</span></label><input id="email" maxlength="254" type="email" required autocomplete="email">
+<label class="field" for="phone">電話番号（任意）</label><input id="phone" maxlength="40" type="tel" autocomplete="tel">
+<div class="hp" aria-hidden="true"><label for="website">ウェブサイト</label><input id="website" tabindex="-1" autocomplete="off"></div>
+<details><summary>個人情報の取り扱いについて</summary><p class="small">ご入力いただいた情報は、合同会社Happy sugarが相談内容の確認、返信、見積もり・サービス提供に関する連絡のために利用します。受付データはアクセス制限された外部クラウドサービスで管理します。法令に基づく場合などを除き、本人の同意なく第三者に提供しません。開示・訂正・削除等のご相談は info@happysugar.online までご連絡ください。</p></details>
+<label class="consent"><input type="checkbox" id="consent" required><span class="small">上記の個人情報の取り扱いを確認し、同意します <span class="req">*</span></span></label>
+<div class="cf-turnstile" data-sitekey="0x4AAAAAAF8c1fkCf36zhnea" data-theme="light"></div>
+<p id="status" role="status" aria-live="polite"></p><button id="send" type="submit">無料相談を送信する</button>
+<p class="muted small">※ ファイル添付は現在準備中です。必要な資料は相談後にご案内します。</p></form>
+<footer>© 合同会社 Happy sugar</footer></div>
+<script>
+const form=document.getElementById('consultForm'),button=document.getElementById('send'),status=document.getElementById('status');
+const endpoint='https://mceoggpycmwkddfzlana.supabase.co/functions/v1/submit-consultation';
+form.addEventListener('submit',async e=>{
+ e.preventDefault();if(!form.reportValidity())return;
+ const token=window.turnstile?.getResponse();if(!token){status.className='error';status.textContent='認証が完了していません。少し待ってから再度お試しください。';return}
+ button.disabled=true;status.className='muted';status.textContent='送信しています…';
+ const src=new URLSearchParams(location.search).get('src')||'direct';
+ const payload={name:document.getElementById('name').value,email:document.getElementById('email').value,phone:document.getElementById('phone').value,company:document.getElementById('company').value,category:document.getElementById('category').value,current_method:document.querySelector('input[name=current]:checked')?.value||'',description:document.getElementById('details').value,source:src,website:document.getElementById('website').value,consent:document.getElementById('consent').checked,turnstile_token:token};
+ try{const response=await fetch(endpoint,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(payload)});if(!response.ok)throw new Error('HTTP '+response.status);const result=await response.json();if(!result.ok)throw new Error('Save failed');form.innerHTML='<div class="success"><h2>ご相談ありがとうございます！</h2><p>内容を受け付けました。担当者より折り返しご連絡いたします。</p></div>';window.scrollTo({top:0,behavior:'smooth'});}
+ catch(err){status.className='error';status.textContent='送信できませんでした。時間をおいて再度お試しいただくか、info@happysugar.online までご連絡ください。';window.turnstile?.reset();button.disabled=false;}
+});
+</script></body></html>
