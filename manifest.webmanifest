@@ -9,10 +9,16 @@
   "theme_color": "#e76b9c",
   "icons": [
     {
-      "src": "/hs-icon.svg?v=2",
-      "sizes": "any",
-      "type": "image/svg+xml",
-      "purpose": "any maskable"
+      "src": "/happysugar-icon-original.png?v=4",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/happysugar-icon-original.png?v=4",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
     }
   ]
 }
