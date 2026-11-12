@@ -25,6 +25,32 @@
 <footer>© 合同会社 Happy sugar</footer></div>
 <script>
 const form=document.getElementById('consultForm'),button=document.getElementById('send'),status=document.getElementById('status');
+
+// 見積もりシミュレーターからの引き継ぎ（URLの内容は表示のみ、送信前にお客様が確認）
+(function prefillEstimate(){
+ const params=new URLSearchParams(location.search);
+ const estimate=params.get('estimate');
+ if(!estimate)return;
+ const safe=estimate.slice(0,3000);
+ const details=document.getElementById('details');
+ const category=document.getElementById('category');
+ if(!details||!category)return;
+ details.value='【料金シミュレーターで選択した内容】\n'+safe+'\n\n【ご相談・ご要望】\n';
+ const first=safe.match(/^商品：(.+)$/m)?.[1]||'';
+ const mapping=[
+  [/がんばれ|創業応援/,'売上・経費・利益を管理したい'],
+  [/業務管理/,'既存のExcel・スプシを使いやすくしたい'],
+  [/ポイントカード|公式LINE/,'ポイントカード・顧客管理'],
+  [/事務作業|会社まるごと/,'その他のアプリ・自動化']
+ ];
+ const matched=mapping.find(([pattern])=>pattern.test(first));
+ if(matched)category.value=matched[1];
+ const box=document.createElement('div');
+ box.style.cssText='background:#f0faf4;border:1px solid #b8dfc8;border-radius:10px;padding:12px;margin:12px 0;color:#215d3a;font-size:14px;line-height:1.6';
+ box.textContent='✓ お見積もり内容を自動入力しました。内容をご確認のうえ、お名前・メールアドレスなどを入力して送信してください。';
+ details.before(box);
+})();
+
 const endpoint='https://mceoggpycmwkddfzlana.supabase.co/functions/v1/submit-consultation';
 form.addEventListener('submit',async e=>{
  e.preventDefault();if(!form.reportValidity())return;
